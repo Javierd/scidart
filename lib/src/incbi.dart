@@ -75,6 +75,12 @@ double incbi(double aa, double bb, double yy0){
     y0 = yy0;
     x = a / (a + b);
     y = incbet(a, b, x);
+    d = 0;
+    yp = 0;
+    lgm = 0;
+    di = 0;
+    xt = 0;
+    dir = 0;
     return _ihalve(aa, bb, yy0, a, b, y0, d, y, x, x0, x1, lgm, yp, di, dithresh, yl, yh, xt, rflg, dir, nflg);
   }
   else {
@@ -112,6 +118,9 @@ double incbi(double aa, double bb, double yy0){
   x = a / (a + b * exp(d));
   y = incbet(a, b, x);
   yp = (y - y0) / y0;
+  di = 0;
+  xt = 0;
+  dir = 0;
   if (yp.abs() < 0.2)
     return _newt(aa, bb, yy0, a, b, y0, d, y, x, x0, x1, lgm, yp, di, dithresh, yl, yh, xt, rflg, dir, nflg);
 

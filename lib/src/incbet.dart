@@ -127,7 +127,7 @@ double incbet(double aa, double bb, double xx){
   y = a * log(x);
   t = b * log(xc);
   if ((a + b) < MAXGAM && y.abs() < MAXLOG && t.abs() < MAXLOG) {
-    t = pow(xc, b);
+    t = pow(xc, b).toDouble();
     t *= pow(x, a);
     t /= a;
     t *= w;
